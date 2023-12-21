@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>CAT ENERGY</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="main-header">
     <div class="main-header__wrapper">
       <a class="main-header__logo" href="#">
-        <img class="main-header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип CAT ENERGY">
+        <picture>
+          <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
+          <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+          <img class="main-header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип CAT ENERGY">
+        </picture>
       </a>
       <a class="main-header__logo" href="#">
-        <img class="main-header__logo-text" src="images/logo-text.svg" width="101" height="18" alt="Надпись CAT ENERGY">
+        <picture>
+          <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text-desktop.svg">
+          <img class="main-header__logo-text" src="images/logo-text.svg" width="101" height="18" alt="Надпись CAT ENERGY">
+        </picture>
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -130,40 +142,39 @@
 
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <div class="main-footer__contacts contacts">
-          <h2 class="visually-hidden">Наше местоположение</h2>
-          <div class="contacts__content contacts-content">
-            <p class="contacts__headline">Приглашаем к сотрудничеству дилеров!</p>
-            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-          </div>
-          <img src="images/map-mobile.jpg" width="320" height="362" alt="Наше местоположение на карте.">
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="contacts-discription">
+          <p class="contacts-title">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts-address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
-        <a class="main-footer__logo" href="index.html">
-          <img src="images/logo-text.svg" width="128" height="24" alt="Логотип Cat Energy.">
+        <picture>
+          <source width="1440" height="400" type="image/jpeg" media="(min-width: 1440px)" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x">
+          <source width="768" height="400" type="image/jpeg" media="(min-width: 768px)" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x">
+          <img class="contacts-maps" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320" height="362" alt="Наше местоположение на карте.">
+        </picture>
+      </div>
+      <a class="main-footer__logo" href="index.html">
+        <img src="images/logo-text.svg" width="128" height="24" alt="Логотип Cat Energy.">
+      </a>
+      <div class="main-footer__social social">
+        <h2 class="visually-hidden">Социальные сети</h2>
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Вконтакте</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Ютуб</a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Телеграмм</a>
+          </li>
+        </ul>
+      </div>
+      <div class="main-footer-copyright">
+        <p class="main-footer__copyright-text">HTML Academy</p>
+        <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="images/logo-html-academy.svg" width="27" height="34" alt="Логотип HTML Academy.">
         </a>
-        <div class="main-footer__social social">
-          <h2 class="visually-hidden">Мы в социальных сетях.</h2>
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">Мы в Вконтакте.</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">Мы в Ютубе.</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">Мы в Телеграме.</a>
-            </li>
-          </ul>
-        </div>
-        <div class="main-footer__copyright">
-          <h2 class="visually-hidden">Наши разработчики.</h2>
-          <div class="main-footer__copyright copyright">
-            <p class="main-footer__copyright-text">HTML Academy</p>
-            <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
-              <img src="images/logo-html-academy.svg" width="27" height="34" alt="Логотип HTML Academy.">
-            </a>
-          </div>
-        </div>
       </div>
     </footer>
   </body>
