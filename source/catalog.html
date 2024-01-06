@@ -29,15 +29,15 @@
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--current">
-              <a href="#">Главная</a>
+          <ul class="main-nav__list nav-list">
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="#">Главная</a>
             </li>
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог продукции</a>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="site-list__item">
-              <a href="form.html">Подбор программы</a>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -277,8 +277,8 @@
                 <a class="button" href="#">Заказать</a>
               </li>
             </ul>
-            <div class="promotion-gift gift">
-              <p class="promotion-gift__description">Закажите все и получите чехол для кота в подарок!</p>
+            <div class="additional-products__gift gift">
+              <p class="gift__description">Закажите все и получите чехол для кота в подарок!</p>
             </div>
           </div>
         </div>
@@ -287,16 +287,18 @@
 
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts-discription">
-          <p class="contacts-title">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="contacts-address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="main-footer__contacts contacts">
+          <h2 class="visually-hidden">Контакты</h2>
+          <div class="contacts__discription">
+            <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
+            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
+          <picture class="contacts__location">
+            <source width="1440" height="400" type="image/jpeg" media="(min-width: 1440px)" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x">
+            <source width="768" height="400" type="image/jpeg" media="(min-width: 768px)" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x">
+            <img class="contacts-maps" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320" height="362" alt="Наше местоположение на карте.">
+          </picture>
         </div>
-        <picture>
-          <source width="1440" height="400" type="image/jpeg" media="(min-width: 1440px)" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x">
-          <source width="768" height="400" type="image/jpeg" media="(min-width: 768px)" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x">
-          <img class="contacts-maps" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320" height="362" alt="Наше местоположение на карте.">
-        </picture>
       </div>
       <a class="main-footer__logo" href="index.html">
         <img src="images/logo-text.svg" width="128" height="24" alt="Логотип Cat Energy.">
@@ -315,13 +317,12 @@
           </li>
         </ul>
       </div>
-      <div class="main-footer-copyright">
-        <p class="main-footer__copyright-text">HTML Academy</p>
-        <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+      <div class="main-footer__copyright copyright">
+        <p class="copyright__text">HTML Academy</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <img src="images/logo-html-academy.svg" width="27" height="34" alt="Логотип HTML Academy.">
         </a>
       </div>
-
     </footer>
   </body>
 </html>

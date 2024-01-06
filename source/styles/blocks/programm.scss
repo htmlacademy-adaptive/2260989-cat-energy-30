@@ -1,0 +1,22 @@
+.programm__slim-title,
+.programm__pro-title {
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.programm__slim-description,
+.programm__pro-description {
+  font-family: $text-font;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.programm__slim-button,
+.programm__pro-button button {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+}
