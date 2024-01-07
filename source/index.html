@@ -4,27 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>CAT ENERGY</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="main-header">
       <a class="main-header__logo" href="index.html">
-        <img class="main-header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип CAT ENERGY">
+        <picture>
+          <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
+          <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+          <img class="main-header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип CAT ENERGY">
+        </picture>
       </a>
       <a class="main-header__logo" href="#">
-        <img class="main-header__logo-text" src="images/logo-text.svg" width="101" height="18" alt="Надпись CAT ENERGY">
+        <picture>
+          <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text-desktop.svg">
+          <img class="main-header__logo-text" src="images/logo-text.svg" width="101" height="18" alt="Надпись CAT ENERGY">
+        </picture>
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--current">
-              <a href="#">Главная</a>
+          <ul class="main-nav__list nav-list">
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="#">Главная</a>
             </li>
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог продукции</a>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="site-list__item">
-              <a href="form.html">Подбор программы</a>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </div>
@@ -38,8 +50,12 @@
         <div class="promo-wrapper">
           <h2 class="promo-title">Функциональное<br>питание для котов</h2>
           <p class="promo-slogan">Занялся собой? Займись котом!</p>
-          <img class="promo-image" src="images/promo-example.png" width="280" height="270" alt="Надпись CAT ENERGY">
-          <a class="promo-button" href="form.html">Подобрать программу</a>
+          <picture>
+            <source width="552" height="499" type="image/png" media="(min-width: 1440px)" srcset="images/promo-example-desktop@1x.png 1x, images/promo-example-desktop@2x.png 2x">
+            <source width="709" height="690" type="image/png" media="(min-width: 768px)" srcset="images/promo-example-tablet@1x.png 1x, images/promo-example-tablet@2x.png 2x">
+            <img class="promo-image" src="images/promo-example-mobile@1x.png" srcset="images/promo-example-mobile@2x.png 2x" width="280" height="270" alt="Надпись CAT ENERGY">
+          </picture>
+          <a class="promo-button button" href="form.html">Подобрать программу</a>
         </div>
       </section>
 
@@ -49,12 +65,12 @@
           <div class="programm__slim">
             <h3 class="programm__slim-title">Похудение</h3>
             <p class="programm__slim-description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="programm__slim-button" href="catalog.html">Каталог slim</a>
+            <a class="programm__slim-button button" href="catalog.html">Каталог slim</a>
           </div>
           <div class="programm__pro">
             <h3 class="programm__pro-title">Набор массы</h3>
             <p class="programm__pro-description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="programm__pro-button" href="catalog.html">Каталог pro</a>
+            <a class="programm__pro-button button" href="catalog.html">Каталог pro</a>
           </div>
         </div>
       </section>
@@ -104,16 +120,21 @@
                     <dd class="effect-list__definition">60 дней</dd>
                   </div>
                 </dl>
-
                 <p class="example__effect-charges">Затраты на питание:<span>15 000 руб.</span></p>
               </div>
             </div>
-            <div class="example-slider">
-              <img class="example-slider__image slider-image-before" src="images/cat-before.png" width="280" height="256" alt="Кот Борис До">
-              <button class="slider-button" type="button">
+            <div class="example-slider slider">
+              <picture class="slider-image">
+                <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-before@1x.png 1x, images/cat-before@2x.png 2x">
+                <img class="example-slider__image slider-image-before" src="images/cat-before-mobile@1x.png" srcset="images/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Кот Борис До">
+              </picture>
+              <button class="slider__button" type="button">
                 <span class="visually-hidden">Управление слайдером</span>
               </button>
-              <img class="example-slider__image slider-image-after" src="images/cat-after.png" width="280" height="256" alt="Кот Борис После">
+              <picture class="slider-image">
+                <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-after@1x.png 1x, images/cat-after@2x.png 2x">
+                <img class="example-slider__image slider-image-after" src="images/cat-after-mobile@1x.png" srcset="images/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Кот Борис После">
+              </picture>
             </div>
         </div>
       </section>
@@ -122,12 +143,18 @@
 
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts-discription">
-          <p class="contacts-title">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="contacts-address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="main-footer__contacts contacts">
+          <h2 class="visually-hidden">Контакты</h2>
+          <div class="contacts__discription">
+            <p class="contacts__title">Приглашаем к сотрудничеству дилеров!</p>
+            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          </div>
+          <picture class="contacts__location">
+            <source width="1440" height="400" type="image/jpeg" media="(min-width: 1440px)" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x">
+            <source width="768" height="400" type="image/jpeg" media="(min-width: 768px)" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x">
+            <img class="contacts-maps" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320" height="362" alt="Наше местоположение на карте.">
+          </picture>
         </div>
-        <img class="contacts-maps" src="images/map-mobile.jpg" width="320" height="362" alt="Наше местоположение на карте.">
       </div>
       <a class="main-footer__logo" href="index.html">
         <img src="images/logo-text.svg" width="128" height="24" alt="Логотип Cat Energy.">
@@ -146,13 +173,12 @@
           </li>
         </ul>
       </div>
-      <div class="main-footer-copyright">
-        <p class="main-footer__copyright-text">HTML Academy</p>
-        <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+      <div class="main-footer__copyright copyright">
+        <p class="copyright__text">HTML Academy</p>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
           <img src="images/logo-html-academy.svg" width="27" height="34" alt="Логотип HTML Academy.">
         </a>
       </div>
-
     </footer>
   </body>
 </html>
