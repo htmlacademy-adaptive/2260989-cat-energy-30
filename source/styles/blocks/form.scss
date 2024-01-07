@@ -1,0 +1,20 @@
+.form__title {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  padding: 0;
+}
+
+.form__label,
+.form__input {
+  color: $text-color-secondary;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.form__legend {
+  font-family: $text-font;
+  font-size: 14px;
+  line-height: 16px;
+}
