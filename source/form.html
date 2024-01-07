@@ -97,7 +97,7 @@
           </ul>
         </fieldset>
         <fieldset class="form__section comment">
-          <label class="form__title" for="comment">Комментарий</label>
+          <legend class="form__title">Комментарий</legend>
           <div class="form__textarea-wrapper">
             <textarea class="form__input" name="comment" id="comment">Расскажите обо всех повадках кота</textarea>
           </div>
@@ -105,21 +105,25 @@
         <fieldset class="form__section additional-products-info">
           <legend class="form__title">Дополнительно</legend>
           <ul class="form__list">
-            <li class="form__item checkbox">
-              <input class="checkbox__input visually-hidden" type="checkbox" name="sweetener" id="sweetener" checked>
-              <label class="form__label checkbox__label">Сахарозаменитель</label>
+            <li class="form__item">
+              <label class="form__label checkbox">
+                <input class="form__input" type="checkbox" name="sweetener" id="sweetener" checked>
+                Сахарозаменитель</label>
+            </li>
+            <li class="form__item">
+              <label class="form__label checkbox">
+                <input class="form__input" type="checkbox" name="water" id="water">
+                Питьевая вода</label>
             </li>
             <li class="form__item checkbox">
-              <input class="checkbox__input visually-hidden" type="checkbox" name="water" id="water">
-              <label class="form__label checkbox__label">Питьевая вода</label>
+              <label class="form__label checkbox">
+                <input class="form__input" type="checkbox" name="milk" id="milk">
+                Молоко</label>
             </li>
             <li class="form__item checkbox">
-              <input class="checkbox__input visually-hidden" type="checkbox" name="milk" id="milk">
-              <label class="form__label checkbox__label">Молоко</label>
-            </li>
-            <li class="form__item checkbox">
-              <input class="checkbox__input visually-hidden" type="checkbox" name="vitamins" id="vitamins">
-              <label class="form__label checkbox__label">Витамины</label>
+              <label class="form__label checkbox">
+                <input class="form__input" type="checkbox" name="vitamins" id="vitamins">
+                Витамины</label>
             </li>
           </ul>
         </fieldset>
