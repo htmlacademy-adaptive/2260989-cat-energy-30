@@ -13,33 +13,35 @@
   </head>
   <body>
     <header class="main-header main-header--main-page">
-      <a class="main-header__logo" href="#">
-        <picture class="main-header__logo-image">
-          <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
-          <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
-          <img class="main-header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип CAT ENERGY">
-        </picture>
-        <picture class="main-header__logo-text">
-          <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text-desktop.svg">
-          <img class="main-header__logo-text" src="images/logo-text.svg" width="101" height="18" alt="Надпись CAT ENERGY">
-        </picture>
-      </a>
-      <nav class="main-header__main-nav main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list nav-list">
-            <li class="nav-list__item">
-              <a class="nav-list__link" href="#">Главная</a>
-            </li>
-            <li class="nav-list__item">
-              <a class="nav-list__link" href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="nav-list__item">
-              <a class="nav-list__link" href="form.html">Подбор программы</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="main-header__wrapper">
+        <a class="main-header__logo" href="#">
+          <picture class="main-header__logo-image">
+            <source width="70" height="59" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg">
+            <source width="60" height="50" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg">
+            <img class="main-header__logo-image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип CAT ENERGY">
+          </picture>
+          <picture class="main-header__logo-text">
+            <source width="118" height="21" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-text-desktop.svg">
+            <img class="main-header__logo-text" src="images/logo-text.svg" width="101" height="18" alt="Надпись CAT ENERGY">
+          </picture>
+        </a>
+        <nav class="main-header__main-nav main-nav main-nav--opened main-nav--nojs">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list nav-list">
+              <li class="nav-list__item">
+                <a class="nav-list__link nav-list__link--main-page nav-list__link--active" href="#">Главная</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="nav-list__link nav-list__link--main-page" href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="nav-list__link nav-list__link--main-page" href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
 
       <section class="promo">
         <div class="promo-wrapper">

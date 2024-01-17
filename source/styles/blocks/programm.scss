@@ -1,16 +1,62 @@
+.programm {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    gap: 30px;
+    margin: 0 30px;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 auto;
+    margin-bottom: 71px;
+    width: 84%;
+    min-width: 1220px;
+    flex-direction: row;
+    gap: 80px;
+  }
+}
+
 .programm__slim {
   padding: 21px 20px 18px 20px;
   background-color: $background-color-secondary;
   position: relative;
 
+  &::after {
+    width: 36px;
+    height: 50px;
+    background-image: url("../../images/cat-slim.svg");
+    top: 21px;
+    left: 27px;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 77px 63px 53px 52px;
+
+    &::after {
+      width: 140px;
+      height: 194px;
+      top: 81px;
+      left: auto;
+      right: 93px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 40%;
     min-width: 457px;
     padding: 41px 61px 55px 52px;
+
+    &::after {
+      width: 70px;
+      height: 97px;
+      top: 41px;
+      left: 67px;
+    }
   }
 }
 
@@ -19,14 +65,37 @@
   background-color: $background-color-secondary;
   position: relative;
 
+  &::after {
+    width: 67px;
+    height: 28px;
+    background-image: url("../../images/cat-pro.svg");
+    top: 35px;
+    left: 13px;
+  }
+
   @media (min-width: $tablet-width) {
     padding: 77px 29px 53px 52px;
+
+    &::after {
+      width: 268px;
+      height: 112px;
+      top: 135px;
+      left: auto;
+      right: 29px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     width: 40%;
     min-width: 457px;
     padding: 47px 67px 55px 33px;
+
+    &::after {
+      width: 134px;
+      height: 56px;
+      top: 67px;
+      left: 33px;
+    }
   }
 }
 
@@ -212,7 +281,7 @@
     background-color: $background-color-secondary;
 
     &::after {
-      background-image: url("../../images/icon-arrow-long.svg");
+      background-image: url("../../images/icon-arrow-big.svg");
     }
   }
 
