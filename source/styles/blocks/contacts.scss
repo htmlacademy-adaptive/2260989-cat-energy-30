@@ -1,13 +1,114 @@
+.contacts {
+  position: relative;
+}
+
+.contacts__discription {
+  padding: 26px 20px;
+  background-color: $background-color-primary;
+  display: flex;
+
+  @media (min-width: $tablet-width) {
+    min-width: 628px;
+    gap: 308px;
+    padding: 61px 70px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 0;
+    width: 407px;
+    padding: 61px 78px 60px 80px;
+    gap: 87px;
+    position: absolute;
+    top: 95px;
+    left: calc(50% - 610px);
+  }
+
+  &--primary {
+    background-color: $background-color-secondary;
+
+    @media (min-width: $desktop-width) {
+      background-color: $background-color-primary;
+    }
+  }
+}
+
 .contacts__title {
+  color: #111111;
   font-size: 16px;
   line-height: 20px;
-  font-weight: 400;
   text-transform: uppercase;
+  width: 140px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    width: 162px;
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .contacts__address {
+  color: $text-color-secondary;
   font-family: $text-font;
   font-size: 14px;
   line-height: 20px;
-  font-weight: 400;
+  width: 140px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    width: 157px;
+    margin-right: auto;
+    text-align: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    text-align: left;
+  }
+}
+
+.contacts__street {
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 19px;
+  }
+}
+
+.contacts__city {
+  margin: 0;
+}
+
+.contacts__location img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.contacts__interactive-location {
+  display: block;
+  border: none;
+  width: 100%;
+  max-width: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 112px;
+  z-index: 10;
+  height: 362px;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+    top: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 0;
+  }
 }
