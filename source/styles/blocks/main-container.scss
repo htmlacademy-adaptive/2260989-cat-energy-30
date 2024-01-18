@@ -1,11 +1,13 @@
 .main-container {
+  width: 320px;
+
   @media (min-width: $desktop-width) {
     overflow: hidden;
   }
 }
 
 .main-container__wrapper {
-  min-width: 280px;
+  min-width: 320px;
   margin: 0;
   padding: 0 20px;
 
@@ -15,7 +17,7 @@
 
   @media (min-width: $desktop-width) {
     width: 84%;
-    min-width: 1220px;
+    min-width: 1440px;
     margin: 0 auto;
     padding: 0;
   }
@@ -33,9 +35,8 @@
 
 .main-container__title {
   font-size: 36px;
-  font-weight: 400;
   line-height: 36px;
-  margin: 27px 42px 41px 20px;
+  font-weight: 400;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
@@ -48,7 +49,8 @@
   }
 
   &--catalog {
-    margin-bottom: 41px;
+    width: 280px;
+    margin: 27px 42px 41px 20px;
 
     @media (min-width: $tablet-width) {
       margin-bottom: 84px;

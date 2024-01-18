@@ -1,4 +1,12 @@
 .gift {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 290px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: $color-secondary;
   background-image:
     image-set(
@@ -8,10 +16,8 @@
       url("../../images/gift-background-mobile@2x.png") type("image/png") 2x
     );
   background-size: cover;
-  min-height: 290px;
-  max-width: 500px;
-  display: flex;
-  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
 
   @media (min-width: $tablet-width) {
     min-height: 200px;
@@ -62,6 +68,7 @@
     background-image: url("../../images/icon-gift.svg");
     background-repeat: no-repeat;
     background-position: center;
+    z-index: 1;
   }
 
   @media (min-width: $tablet-width) {

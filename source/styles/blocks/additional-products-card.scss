@@ -20,7 +20,7 @@
 }
 
 .additional-product-card__content {
-  margin-bottom: 15px;
+  margin-bottom: 0;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -44,7 +44,6 @@
   text-transform: uppercase;
   width: 130px;
   margin: 0;
-  margin-bottom: 13px;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -87,7 +86,7 @@
 }
 
 .additional-product-card__price {
-  margin: 0;
+  margin: auto 0;
 }
 
 .additional-product-card__button {
