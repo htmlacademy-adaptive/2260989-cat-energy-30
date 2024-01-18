@@ -4,13 +4,13 @@
 
 .contacts__discription {
   padding: 26px 20px;
-  background-color: $background-color-primary;
+  background-color: $background-color-secondary;
   display: flex;
 
   @media (min-width: $tablet-width) {
     min-width: 628px;
     gap: 308px;
-    padding: 61px 70px;
+    padding: 60px 70px;
     margin: 0 auto;
   }
 
@@ -34,6 +34,26 @@
 }
 
 .contacts__title {
+  color: #111111;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  width: 140px;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 26px;
+    width: 162px;
+    margin-left: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.contacts__headline {
   color: #111111;
   font-size: 16px;
   line-height: 20px;

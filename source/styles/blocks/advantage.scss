@@ -23,7 +23,11 @@
   @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 33px;
   }
 }
 
@@ -39,12 +43,12 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 37px 137px;
+    gap: 37px 139px;
     max-width: 900px;
   }
 
   @media (min-width: $desktop-width) {
-    gap: 69px 94px;
+    gap: 37px 80px;
     max-width: none;
   }
 }
@@ -149,3 +153,8 @@
   }
 }
 
+.advantages__description br {
+  @media (max-width: calc($tablet-width - 1px)) {
+    display: none;
+  }
+}

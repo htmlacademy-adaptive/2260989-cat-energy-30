@@ -1,13 +1,11 @@
 .main-container {
-  width: 320px;
-
   @media (min-width: $desktop-width) {
     overflow: hidden;
   }
 }
 
 .main-container__wrapper {
-  min-width: 320px;
+  min-width: 280px;
   margin: 0;
   padding: 0 20px;
 
@@ -37,6 +35,7 @@
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  margin: 27px 0 0;
 
   @media (min-width: $tablet-width) {
     font-size: 60px;
@@ -49,11 +48,10 @@
   }
 
   &--catalog {
-    width: 280px;
     margin: 27px 42px 41px 20px;
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 84px;
+      margin: 65px 308px 84px 30px;
     }
   }
 
