@@ -83,19 +83,19 @@
   }
 
   &--nutrient::before {
-    background-image: url("../img/icons/ico-leaf.svg");
+    background-image: url("../../images/icon-healthy.svg");
   }
 
   &--powder::before {
-    background-image: url("../img/icons/ico-tub.svg");
+    background-image: url("../../images/icon-easy.svg");
   }
 
   &--diet::before {
-    background-image: url("../img/icons/ico-eat.svg");
+    background-image: url("../../images/icon-econom.svg");
   }
 
   &--result::before {
-    background-image: url("../img/icons/ico-alarm.svg");
+    background-image: url("../../images/icon-effect.svg");
   }
 }
 

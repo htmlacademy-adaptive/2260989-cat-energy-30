@@ -93,16 +93,16 @@
 
     @media (min-width: $width-tablet) {
       border-bottom: 1px dotted rgba($color-black, 0.25);
-
-      .switcher__button:hover & {
-        border-bottom: 1px solid rgba($color-black, 0.4);
-      }
-
-      .switcher__button:active & {
-        border-bottom: none;
-      }
     }
   }
+}
+
+.switcher__button:hover & {
+  border-bottom: 1px solid rgba($color-black, 0.4);
+}
+
+.switcher__button:active & {
+  border-bottom: none;
 }
 
 // СТИЛИЗАЦИЯ ПОЛЗУНКА RANGE

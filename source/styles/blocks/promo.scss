@@ -3,16 +3,17 @@
     color: $color-white;
     text-align: center;
 
-    background: {
-      image: url("../img/background/promo-back-mobile.jpg"), linear-gradient($promo-green, $promo-green 302px, $color-white 302px);
-      position: 50% 0;
-      repeat: no-repeat;
-      size: auto 302px;
-    }
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/background/promo-back-mobile@2x.jpg"), linear-gradient($promo-green, $promo-green 302px, $color-white 302px);
-    }
+    background-image:
+      image-set(
+    url("../../images/promo-background-mobile@1x.webp") type("image/webp") 1x,
+    url("../../images/promo-background-mobile@2x.webp") type("image/webp") 2x,
+    url("../../images/promo-background-mobile@1x.png") type("image/png") 1x,
+    url("../../images/promo-background-mobile@2x.png") type("image/png") 2x
+  ),
+      linear-gradient(#63a63b, #63a63b 302px, $background-color-primary 302px, $background-color-primary);
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: auto 302px;
   }
 
   @media (min-width: $width-pre-desktop) {
@@ -47,14 +48,15 @@
       bottom: 0;
       z-index: -2;
       background-color: $promo-green;
-      background-image: url("../img/background/promo-back-desktop.jpg");
+      background-image:
+        image-set(
+        url("../../images/promo-background-desktop@1x.webp") type("image/webp") 1x,
+        url("../../images/promo-background-desktop@2x.webp") type("image/webp") 2x,
+        url("../../images/promo-background-desktop@1x.png") type("image/png") 1x,
+        url("../../images/promo-background-desktop@2x.png") type("image/png") 2x
+      );
       background-repeat: no-repeat;
       background-position: 0 100%;
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/background/promo-back-desktop@2x.jpg");
-        background-size: auto 690px;
-      }
     }
   }
 }
