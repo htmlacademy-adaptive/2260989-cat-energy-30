@@ -1,0 +1,121 @@
+.fieldset {
+  padding: 0;
+  border: 0;
+}
+
+.fieldset__list {
+  display: grid;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: $width-tablet) {
+    padding-right: $width-tablet-padding-inner;
+    padding-left: $width-tablet-padding-inner;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    padding: 0;
+  }
+}
+
+.fieldset__list--about {
+  row-gap: 14px;
+
+  @media (min-width: $width-tablet) {
+    row-gap: 21px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    // Устанавливаем width: auto, т.к. при десктопном вьюпорте данный блок будет в 2-х колоночной сетке и должен принять ширину ячейки.
+    width: auto;
+  }
+}
+
+.fieldset__list--target {
+  row-gap: 12px;
+
+  @media (min-width: $width-tablet) {
+    // В планшетном вьюпорте присутствуют дополнительные внутрисеточные оступы для контента.
+    // Для информационных блоков страницы мы его задаем padding-ами.
+    // А этот блок имеет бордер и уже заданные паддинги внутри, поэтому мы уменьшаем его общую ширину на размер внутрисеточных отступов.
+    width: ($width-tablet-content - 2 * $width-tablet-padding-inner);
+    padding: 25px 28px;
+    row-gap: 13px;
+    border: 1px solid $special-grey-200;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    // Устанавливаем width: auto, т.к. при десктопном вьюпорте данный блок будет в 2-х колоночной сетке и должен принять ширину ячейки.
+    width: auto;
+  }
+}
+
+.fieldset__list--contacts {
+  row-gap: 14px;
+
+  @media (min-width: $width-tablet) {
+    row-gap: 21px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
+.fieldset__list--more {
+  align-items: center;
+
+  @media (max-width: $width-max-mobile) {
+    row-gap: 12px;
+  }
+
+  @media (min-width: $width-tablet) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 32px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 80px;
+  }
+}
+
+.fieldset__wrapper {
+  // Позиционирование для .page__divider
+  position: relative;
+  width: 100%;
+  padding: 0;
+
+  &--contacts {
+    @media (max-width: $width-max-mobile) {
+      margin-bottom: 35px;
+    }
+
+    @media (min-width: $width-tablet) {
+      margin-bottom: 76px;
+    }
+  }
+
+  &--comments {
+    @media (max-width: $width-max-mobile) {
+      margin-bottom: 37px;
+    }
+
+    @media (min-width: $width-tablet) {
+      margin-bottom: 76px;
+    }
+  }
+
+  &--more {
+    @media (max-width: $width-max-mobile) {
+      margin-bottom: 35px;
+    }
+
+    @media (min-width: $width-tablet) {
+      margin-bottom: 57px;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.bonus {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 290px;
+  padding: 187px 0 43px 0;
+  color: $color-white;
+  font-size: 16px;
+  line-height: 20px;
+
+  background: {
+    image: url("../img/background/bonus-back-mobile.jpg");
+    size: cover;
+    repeat: no-repeat;
+    position: center;
+    color: $basic-green;
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background/bonus-back-mobile@2x.jpg");
+  }
+
+  @media (min-width: $width-tablet) and (max-width: ($width-pre-desktop - 1)) {
+    align-items: center;
+    justify-content: end;
+    min-height: 200px;
+    padding: 70px 124px 70px;
+    background-image: url("../img/background/bonus-back-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/bonus-back-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    background-image: url("../img/background/bonus-back-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/background/bonus-back-desktop@2x.jpg");
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 59px;
+    // Позиционирование по центру горизонтально в мобильном и десктопном вьюпорте
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    width: 78px;
+    height: 80px;
+    background: url("../img/icons/ico_gift.svg");
+
+    @media (min-width: $width-tablet) and (max-width: ($width-pre-desktop - 1)) {
+      // Позиционирование по центру вертикально в планшетном вьюпорте
+      top: 50%;
+      transform: translateY(-50%);
+      left: 77px;
+    }
+  }
+}
+
+.bonus__text {
+  margin: 0;
+  width: 161px;
+
+  @media (max-width: $width-max-mobile) {
+    text-align: center;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    text-align: center;
+  }
+}

@@ -1,0 +1,126 @@
+.field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: $special-grey-700;
+  font-family: $font-title;
+  text-transform: uppercase;
+
+  @media (max-width: $width-max-mobile) {
+    font-size: 16px;
+    line-height: 18px;
+    column-gap: 13px;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 20px;
+    line-height: 30px;
+    column-gap: 19px;
+  }
+}
+
+// Чтобы не вставлять SVG в разметку размещаю через псевдоэлемент на поле label
+// Активные состояния реализовываю через маскирование SVG-шки
+
+.field__ico {
+  &::after {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: $special-grey-700;
+  }
+
+  &--email::after {
+    mask-image: url("../img/icons/ico-email.svg");
+    mask-repeat: no-repeat;
+    mask-position: center right;
+  }
+
+  &--phone::after {
+    mask-image: url("../img/icons/ico-phone.svg");
+    mask-repeat: no-repeat;
+    mask-position: center right;
+  }
+
+  // todo Временно, для эксперимента и личной прокачки навыков,
+  // todo т.к. :has плохо подерживается браузерами. Надо переделать!
+
+  // Окрашиваем фон под маскированными иконками, если
+  // фокус на дочернем элементе input
+  &:has(.field__input:focus)::after {
+    background-color: $basic-green;
+  }
+
+  // набор в input-е не по правилам валидации
+  &:has(:not(:placeholder-shown):invalid)::after {
+    background-color: $status-error;
+  }
+}
+
+.field__input {
+  position: relative;
+  flex-grow: 1;
+  border: 0;
+  outline: 1px solid $special-grey-150;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+
+  @media (max-width: $width-max-mobile) {
+    padding: 13px 15px 14px;
+  }
+
+  @media (min-width: $width-tablet) {
+    padding: 11px 20px;
+  }
+
+  // Disable arrows from .field__input[type="number"]
+
+  &[type="number"]::-webkit-outer-spin-button,
+  &[type="number"]::-webkit-inner-spin-button {
+    appearance: none;
+  }
+
+  &[type="number"],
+  &[type="number"]:hover,
+  &[type="number"]:focus {
+    // appearance: none;
+    appearance: textfield;
+  }
+
+  // Активные состояния полей ввода
+
+  &:focus {
+    outline: 2px solid $special-grey-700;
+  }
+
+  .field:hover &:not(:focus) {
+    outline: 1px solid $special-grey-300;
+  }
+
+  // Подсмотрел! Правило на валидность срабатывает только тогда, когда начинаю
+  // вводить текст (т.е. пропадает плейсхолдер - :not(:placeholder-shown))
+  // Без этого псевдокласса красный outline рисуется вокруг
+  // всех обязательных полей ввода по умолчанию.
+
+  &:not(:placeholder-shown):invalid {
+    outline: 2px solid $status-error;
+  }
+}
+
+.field__input--comments {
+  @media (max-width: $width-max-mobile) {
+    height: 150px;
+    padding: 9px 14px;
+  }
+
+  @media (min-width: $width-tablet) {
+    height: 174px;
+  }
+}

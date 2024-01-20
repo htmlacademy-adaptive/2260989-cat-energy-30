@@ -1,364 +1,135 @@
-.form {
-  font-family: inherit;
-  color: $text-color-secondary;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  overflow: hidden;
+/// <form class="form">
 
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: normal;
-  }
-}
+.form__fieldset-wrapper {
+  display: grid;
 
-.form__wrapper {
-  min-width: 280px;
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  margin-bottom: 32px;
-  padding: 0 20px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 60px;
-    padding: 0 30px;
+  @media (max-width: $width-max-mobile) {
+    margin-bottom: 26px;
+    row-gap: 25px;
   }
 
-  @media (min-width: $desktop-width) {
-    flex-direction: row;
-    flex-wrap: wrap;
+  @media (min-width: $width-tablet) {
+    margin-bottom: 72px;
+    row-gap: 72px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    width: $width-desktop-content;
+    grid-template-columns: 1fr 1fr;
     column-gap: 80px;
-    margin-bottom: 79px;
-    width: 84%;
-    min-width: 1440px;
+    margin: 0 auto;
+    margin-bottom: 69px;
   }
 }
 
-.form__section {
-  border: none;
-  padding: 0;
+.form__fieldset {
   margin: 0;
-  padding-bottom: 24px;
+}
 
-  @media (min-width: $tablet-width) {
-    padding-bottom: 0;
+// Каждый блок имеет разные отступы
+
+// Информация о коте
+// .form__fieldset--about { }
+
+// Цель программы
+.form__fieldset--target {
+  @media (max-width: $width-max-mobile) {
+    padding: 22px 0 19px;
+    border-top: 1px solid $special-grey-200;
+    border-bottom: 1px solid $special-grey-200;
+  }
+
+  // @media (min-width: $width-tablet) {}
+}
+
+// Контактные данные (владельца кота)
+.form__fieldset--contacts {
+  @media (max-width: $width-max-mobile) {
+    margin-bottom: 23px;
+  }
+
+  @media (min-width: $width-tablet) {
     margin-bottom: 65px;
   }
 
-  @media (min-width: $desktop-width) {
-    margin-bottom: 70px;
-  }
-
-  &--general,
-  &--program-types {
-    position: relative;
-  }
-
-  &--general {
-    @media (min-width: $tablet-width) {
-      margin-bottom: 72px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 46%;
-      min-width: 570px;
-    }
-  }
-
-  &--program-types {
-    padding-bottom: 18px;
-    padding-top: 22px;
-
-    @media (min-width: $tablet-width) {
-      padding: 0;
-      margin-bottom: 65px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 46%;
-      min-width: 570px;
-    }
-  }
-
-  &--owner-info {
-    width: 100%;
-    margin-top: 25px;
-
-    @media (min-width: $tablet-width) {
-      margin-top: 0;
-    }
-  }
-
-  &--additional-products-info {
-    padding-bottom: 34px;
-    width: 100%;
-
-    @media (min-width: $tablet-width) {
-      padding-bottom: 0;
-      margin-bottom: 52px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 60px;
-    }
+  @media (min-width: $width-pre-desktop) {
+    margin-bottom: 66px;
   }
 }
 
-.form__section--program-types::after,
-.form__section--general::after {
-  position: absolute;
-  content: "";
-  height: 1px;
-  width: 100vw;
-  background-color: #d9d9d9;
-  left: -20px;
-  bottom: 0;
+// Коментарий
+.form__fieldset--comments {
+  @media (max-width: $width-max-mobile) {
+    margin-bottom: 23px;
+  }
 
-  @media (min-width: $tablet-width) {
-    content: none;
+  @media (min-width: $width-tablet) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    margin-bottom: 67px;
   }
 }
 
-.form__section--owner-info .form__title {
-  margin-bottom: 35px;
+// Дополнительно
+// .form__fieldset--more {}
 
-  @media (min-width: $tablet-width) {
-    margin-bottom: 76px;
-  }
-}
+// Обертка кнопки
+.form__button-wrapper {
+  display: grid;
 
-.form__section--comment .form__title {
-  margin-bottom: 38px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 87px;
+  @media (max-width: $width-max-mobile) {
+    margin-top: 34px;
+    row-gap: 21px;
   }
 
-  @media (min-width: $desktop-width) {
-    margin-bottom: 78px;
-  }
-}
-
-.form__section--additional-products-info .form__title {
-  margin-bottom: 34px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 57px;
-  }
-}
-
-.form__section--program-types .form__list {
-  @media (min-width: $tablet-width) {
-    padding: 23px 27px 27px;
-    margin: 0 40px;
-    border: 1px solid #e7e7e7;
-    gap: 13px;
+  @media (min-width: $width-tablet) {
+    padding-left: $width-tablet-padding-inner;
+    padding-right: $width-tablet-padding-inner;
+    margin: 54px auto 0;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
   }
 
-  @media (min-width: $desktop-width) {
-    margin: 0;
-  }
-}
-
-.form__section--additional-products-info .form__list {
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 32px 60px;
-  }
-
-  @media (min-width: $desktop-width) {
-    gap: 103px;
-  }
-}
-
-.form__section--additional-products-info .form__item {
-  @media (min-width: $tablet-width) {
-    width: 284px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 222px;
-  }
-}
-
-.form__section--owner-info .form__list {
-  @media (min-width: $desktop-width) {
-    display: flex;
-    flex-direction: row;
+  @media (min-width: $width-pre-desktop) {
+    margin-top: 61px;
+    padding: 0;
     column-gap: 80px;
-    width: 84%;
-    min-width: 1440px;
   }
 }
 
-.form__section--owner-info .form__item {
-  @media (min-width: $desktop-width) {
-    width: 46%;
-    min-width: 570px;
-  }
-}
-
-.form__title {
-  font-family: $primary-font;
-  color: $text-color-primary;
-  text-transform: none;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 26px;
-  padding: 0;
-  display: inline-flex;
-  background-color: $background-color-primary;
-  padding-right: 20px;
-  max-width: 66%;
-  position: relative;
-
-  &::before {
-    position: absolute;
-    content: "";
-    height: 2px;
-    width: 100vw;
-    background-color: $color-secondary;
-    top: 14px;
-    left: 0;
-    z-index: -1;
-  }
-
-  @media (min-width: $tablet-width) {
-    font-size: 36px;
-    line-height: 36px;
-    max-width: 515px;
-    padding: 0 40px;
-
-    &::before {
-      left: -30px;
-      top: 21px;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    margin-left: -40px;
-
-    &::before {
-      width: 120vw;
-      left: -100px;
-    }
-  }
-}
-
-.form__legend {
-  font-family: $text-font;
-  text-transform: none;
-  text-align: center;
-  font-size: 14px;
-  line-height: 16px;
-  min-width: 180px;
-
-  @media (min-width: $tablet-width) {
-    font-size: 16px;
-  }
-}
-
-.form__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-
-  @media (min-width: $tablet-width) {
-    padding: 0 40px;
-    gap: 20px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 0;
-  }
-}
-
-.form__textarea-input {
-  font-family: inherit;
-  color: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  text-transform: uppercase;
-  display: block;
-  box-sizing: border-box;
-  padding: 13px 14px;
-  width: 100%;
-  min-height: 150px;
-  border: 1px solid #e7e7e7;
-
-  &::placeholder {
-    color: inherit;
-    opacity: 1;
-  }
-
-  &:hover {
-    border: 1px solid #cdcdcd;
-  }
-
-  &:focus {
-    border: 2px solid #444444;
-    outline: none;
-  }
-
-  @media (min-width: $tablet-width) {
-    min-height: 174px;
-    padding: 11px 20px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-top: 8px;
-  }
-}
-
-.form__textarea-wrapper {
-  @media (min-width: $tablet-width) {
-    padding: 0 40px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 0;
-    width: 1440px;
-    margin: 0 auto;
-  }
-}
-
-.form__submit-wrapper {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
-  @media (min-width: $tablet-width) {
-    flex-direction: row;
-    margin-left: 40px;
-    gap: 60px;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0;
-    gap: 80px;
-  }
-}
-
+// Отправить заявку
 .form__button {
-  font-family: inherit;
-  margin-bottom: 21px;
-  width: 100%;
-
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    width: 40%;
-    min-width: 284px;
-    min-height: 54px;
-    margin: 0;
+  @media (max-width: $width-max-mobile) {
+    justify-self: center;
+    width: $width-mobile-content;
+    padding: 10px 20px;
+    font-size: 16px;
+    line-height: 20px;
   }
 
-  @media (min-width: $desktop-width) {
-    min-width: 570px;
+  @media (min-width: $width-tablet) {
+    padding: 16px 45px;
+    font-size: 20px;
+    line-height: 1;
+  }
+}
+
+.form__notice {
+  margin: 0;
+  line-height: 16px;
+
+  @media (max-width: $width-max-mobile) {
+    justify-self: center;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 16px;
+    padding-top: 15px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    padding-top: 18px;
   }
 }

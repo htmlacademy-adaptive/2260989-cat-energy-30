@@ -1,134 +1,112 @@
 .contacts {
-  position: relative;
-}
+  background-color: $color-white;
 
-.contacts__discription {
-  padding: 26px 20px;
-  background-color: $background-color-secondary;
-  display: flex;
-
-  @media (min-width: $tablet-width) {
-    min-width: 628px;
-    gap: 308px;
-    padding: 60px 70px;
-    margin: 0 auto;
-  }
-
-  @media (min-width: $desktop-width) {
-    min-width: 0;
-    width: 407px;
-    padding: 61px 78px 60px 80px;
-    gap: 87px;
-    position: absolute;
-    top: 95px;
-    left: calc(50% - 610px);
-  }
-
-  &--primary {
-    background-color: $background-color-secondary;
-
-    @media (min-width: $desktop-width) {
-      background-color: $background-color-primary;
-    }
+  &--no-fill {
+    background-color: transparent;
   }
 }
 
-.contacts__title {
-  color: #111111;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  width: 140px;
-  margin: 0;
-
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 26px;
-    width: 162px;
-    margin-left: auto;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0;
+.contacts__inner-address {
+  @media (min-width: $width-pre-desktop) {
+    position: relative;
   }
 }
 
-.contacts__headline {
-  color: #111111;
-  font-size: 16px;
-  line-height: 20px;
-  text-transform: uppercase;
-  width: 140px;
-  margin: 0;
+.contacts__inner-map {
+  background-image: url("../../img/index/map.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
 
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 26px;
-    width: 162px;
-    margin-left: auto;
+  @media (max-width: $width-max-mobile) {
+    height: 362px;
   }
 
-  @media (min-width: $desktop-width) {
-    margin: 0;
+  @media (min-width: $width-tablet) {
+    height: 400px;
+  }
+}
+
+.contacts__map {
+  display: block;
+  width: 100%;
+
+  @media (max-width: $width-max-mobile) {
+    height: 362px;
+  }
+
+  @media (min-width: $width-tablet) {
+    height: 400px;
   }
 }
 
 .contacts__address {
-  color: $text-color-secondary;
-  font-family: $text-font;
-  font-size: 14px;
-  line-height: 20px;
-  width: 140px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  font-style: normal;
 
-  @media (min-width: $tablet-width) {
-    font-size: 16px;
-    width: 157px;
-    margin-right: auto;
-    text-align: right;
+  @media (max-width: $width-max-mobile) {
+    padding: 26px 0;
   }
 
-  @media (min-width: $desktop-width) {
+  @media (min-width: $width-tablet) {
+    padding: 59px $width-tablet-padding-inner;
+    grid-template-columns: 175px 175px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    position: absolute;
+    left: 0;
+    top: 95px;
+    width: 565px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 94px;
+    background-color: $color-white;
+  }
+
+  @media (min-width: $width-pre-desktop) {
+    padding: 60px 80px;
+  }
+}
+
+.contacts__title {
+  margin: 0;
+  color: $special-grey-900;
+  font-family: $font-title;
+  text-transform: uppercase;
+  word-break: break-word;
+
+  @media (max-width: $width-max-mobile) {
+    font-size: 16px;
+    line-height: 20px;
+    padding-right: 12px;
+  }
+
+  @media (min-width: $width-tablet) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.contacts__text {
+  margin: 0;
+  line-height: 20px;
+  color: $special-grey-700;
+  word-break: break-word;
+
+  @media (min-width: $width-tablet) {
+    margin-top: -2px;
+    font-size: 16px;
+    text-align: right;
+    // Реализация отступа между span-элементами адреса
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+  }
+
+  @media (min-width: $width-pre-desktop) {
     margin: 0;
     text-align: left;
-  }
-}
-
-.contacts__street {
-  margin: 0;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 19px;
-  }
-}
-
-.contacts__city {
-  margin: 0;
-}
-
-.contacts__location img {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  object-fit: cover;
-}
-
-.contacts__interactive-location {
-  display: block;
-  border: none;
-  width: 100%;
-  max-width: 100%;
-  position: absolute;
-  overflow: hidden;
-  top: 112px;
-  z-index: 10;
-  height: 362px;
-
-  @media (min-width: $tablet-width) {
-    height: 400px;
-    top: 200px;
-  }
-
-  @media (min-width: $desktop-width) {
-    top: 0;
   }
 }
