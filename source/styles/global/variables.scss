@@ -1,53 +1,17 @@
-/// Брекпоинты
-$width-mobile: 320px;
-$width-tablet: 768px;
-$width-desktop: 1440px;
+/* здесь используйте глобальные переменные */
+//Размеры вьюпортов
+$tablet-width: 768px;
+$desktop-width: 1440px;
 
-/// Отступы от края вьюпорта
-$width-mobile-padding: 20px;
-$width-tablet-padding: 30px;
-$width-tablet-padding-inner: 40px;
-$width-desktop-padding: 110px;
+//Цвета
+$background-color-primary: #ffffff;
+$background-color-secondary: #f2f2f2;
+$text-color-primary: #000000;
+$text-color-secondary: #444444;
+$social-icon-color: #666666;
+$color-secondary: #68b738;
+$example-color: #f2f2f2;
 
-/// Ширины контентных контейнеров
-$width-mobile-content: (
-  $width-mobile - 2 * $width-mobile-padding
-);
-$width-tablet-content: (
-  $width-tablet - 2 * $width-tablet-padding
-);
-$width-desktop-content: (
-  $width-desktop - 2 * $width-desktop-padding
-);
-/// Ширина при которой УЖЕ отключаться некоторые классы
-$width-max-mobile: (
-  $width-tablet - 1
-);
-/// Ширина при которой УЖЕ можно включать десктопную раскладку (т.к. боковые паддинги довольно широкие)
-$width-pre-desktop: (
-  $width-desktop-content + 100px
-);
-
-
-/// Шрифты
-$font-title: "Oswald", "Arial", sans-serif;
-$font-body: "Lato", "Arial", sans-serif;
-
-/// Цвета
-$color-black: #000000;
-$color-white: #ffffff;
-$basic-green: #68b738;
-$promo-green: #63a63b;
-$basic-grey: #f2f2f2;
-$secondary-green: #5eaa2f;
-$special-grey-100: #ebebeb;
-$special-grey-150: #e6e6e6;
-$special-grey-175: #dcdcdc;
-$special-grey-200: #d9d9d9;
-$special-grey-250: #cdcdcd;
-$special-grey-300: #bababa;
-$special-grey-600: #666666;
-$special-grey-700: #444444;
-$special-grey-800: #222222;
-$special-grey-900: #111111;
-$status-error: #ff8282;
+//Шрифты
+$primary-font: "Oswald", sans-serif;
+$text-font: "Lato", sans-serif;

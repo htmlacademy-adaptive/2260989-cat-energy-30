@@ -1,56 +1,83 @@
-// Ссылки социальных сетей
-
 .social {
-  display: flex;
-  justify-content: center;
-  list-style: none;
+  margin: 0 auto;
+  width: 132px;
+  position: relative;
 
-  @media (max-width: $width-max-mobile) {
-    border-top: 1px solid $special-grey-200;
-    border-bottom: 1px solid $special-grey-200;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    background-color: #d9d9d9;
+    width: 280px;
+    height: 1px;
+    left: -74px;
   }
+
+  &::before {
+    top: -23px;
+  }
+
+  &::after {
+    bottom: -18px;
+  }
+
+  @media (min-width: $tablet-width) {
+    &::before,
+    &::after {
+      content: none;
+    }
+  }
+}
+
+.social__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 .social__item {
-  // Ccылки в пункте списка становятся флекс-элементами и растягиваются на всю высоту пункта
-  display: flex;
+  position: relative;
+  width: 28px;
+  height: 22px;
 }
 
 .social__link {
-  color: $special-grey-600;
-  // svg-логотипы внутри ссылок становятся флекс-элементами; обнуляется line-height; центрируются вертикально по всей высоте ссылки.
-  display: flex;
-  align-items: center;
+  display: block;
+  position: relative;
+  width: 28px;
+  height: 22px;
 
-  @media (max-width: $width-max-mobile) {
-    padding: 21px 19px;
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 22px;
+    mask-repeat: no-repeat;
+    background-color: $social-icon-color;
   }
 
-  @media (min-width: $width-tablet) {
-
-    padding: 14px 14px;
-
-    &--vkontakte svg {
-      width: auto;
-      height: 17px;
-    }
-
-    &--instagram svg {
-      width: auto;
-      height: 23px;
-    }
-
-    &--facebook svg {
-      width: auto;
-      height: 29px;
-    }
-  }
-
-  &:hover {
-    color: $basic-green;
+  &:hover::after {
+    background-color: $color-secondary;
   }
 
   &:active {
-    color: rgba($basic-green, 0.3);
+    opacity: 0.3;
+  }
+
+  &--vkontakte {
+    mask-image: url("../../images/icons/stack.svg#vkontakte");
+  }
+
+  &--youtube {
+    mask-image: url("../../images/icons/stack.svg#youtube");
+  }
+
+  &--telegram {
+    mask-image: url("../../images/icons/stack.svg#telegram");
   }
 }
