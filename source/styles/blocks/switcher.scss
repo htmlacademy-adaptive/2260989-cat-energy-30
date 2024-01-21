@@ -81,24 +81,23 @@
   &--after {
     grid-column: 3 / 4;
   }
+}
+// Вкладываю внутренний контейнер в button, чтобы оформить для текста
 
-  // Вкладываю внутренний контейнер в button, чтобы оформить для текста
+.switcher__button--inner--inner {
+  display: inline-block;
 
-  &--inner {
-    display: inline-block;
+  @media (min-width: $width-tablet) {
+    border-bottom: 1px dotted rgba($color-black, 0.25);
 
-    @media (min-width: $width-tablet) {
-      border-bottom: 1px dotted rgba($color-black, 0.25);
+    .switcher__button:hover & {
+      border-bottom: 1px solid rgba($color-black, 0.4);
+    }
+
+    .switcher__button:active & {
+      border-bottom: none;
     }
   }
-}
-
-.switcher__button:hover & {
-  border-bottom: 1px solid rgba($color-black, 0.4);
-}
-
-.switcher__button:active & {
-  border-bottom: none;
 }
 
 // СТИЛИЗАЦИЯ ПОЛЗУНКА RANGE
