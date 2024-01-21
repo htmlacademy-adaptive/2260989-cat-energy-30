@@ -35,7 +35,6 @@
   @media (min-width: $width-tablet) {
     padding: 0 38px 39px;
     background-color: initial;
-    // Если border, то он будет сдвигать вниз на 2px заголовок --more карточки, по отношению к заголовкам основных карточек.
     outline: 2px solid $basic-grey;
   }
 
@@ -47,7 +46,6 @@
     content: "";
     width: 30px;
     height: 30px;
-    // background-color: $special-grey-200;
     background: url("../../img/ico-plus-sm.svg") no-repeat center;
 
     @media (min-width: $width-tablet) {
@@ -98,11 +96,6 @@
     @media (min-width: $width-tablet) {
       line-height: 22px;
     }
-
-    // Magic digit: 161px (верхний маргин заголовка --more-карточки)
-    // 242 px (высота фото в основной карточке) – 81px (верхний отступ --more карточки).
-    // P.S> --more карточка ниже на 81px, чем основные, но ее заголовок должен быть на том же уровне что и в основных.
-    // Поэтому и считаем его отступ по выше указанному уравнению.
     margin: 161px 0 23px;
   }
 }
@@ -188,7 +181,6 @@
   word-break: break-word;
 
   &--more {
-    // grid-area: initial;
     margin: 0;
     font-size: 12px;
     line-height: 16px;
@@ -204,7 +196,6 @@
   margin: 0;
   text-align: right;
   min-width: min-content;
-  // flex-shrink: 0;
 }
 
 .card__button {
@@ -224,7 +215,6 @@
   }
 
   &--more {
-    // grid-area: initial;\
     margin-top: auto;
     width: 100%;
   }

@@ -36,9 +36,6 @@
       margin: 0 6px;
       border-radius: 6px;
       background-color: $basic-green;
-      // Почему то не работает :( оставляю как есть
-      //* P.S. А не работает потому, что на justify-self
-      //* действие transition не распространяется!
       justify-self: start;
       transition: justify-self 0.5s ease;
     }
@@ -86,7 +83,6 @@
   }
 
   // Вкладываю внутренний контейнер в button, чтобы оформить для текста
-  // нижний бордер строго на ширину текста, а не на всю ширину кнопки.
 
   &--inner {
     display: inline-block;
@@ -145,7 +141,6 @@
   border-radius: 6px;
 }
 
-// Если объединить два селектора через "," то правило для -webkit не срабатывает.
 .switcher__range::-webkit-slider-runnable-track {
   height: 6px;
   background-color: $special-grey-175;

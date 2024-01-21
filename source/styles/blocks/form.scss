@@ -1,5 +1,3 @@
-/// <form class="form">
-
 .form__fieldset-wrapper {
   display: grid;
 
@@ -26,11 +24,6 @@
   margin: 0;
 }
 
-// Каждый блок имеет разные отступы
-
-// Информация о коте
-// .form__fieldset--about { }
-
 // Цель программы
 .form__fieldset--target {
   @media (max-width: $width-max-mobile) {
@@ -38,8 +31,6 @@
     border-top: 1px solid $special-grey-200;
     border-bottom: 1px solid $special-grey-200;
   }
-
-  // @media (min-width: $width-tablet) {}
 }
 
 // Контактные данные (владельца кота)
@@ -73,8 +64,6 @@
 }
 
 // Дополнительно
-// .form__fieldset--more {}
-
 // Обертка кнопки
 .form__button-wrapper {
   display: grid;

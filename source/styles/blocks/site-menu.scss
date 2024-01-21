@@ -66,10 +66,6 @@
     padding: 17px;
   }
 
-  @media (min-width: $width-pre-desktop) {
-    // padding: 15px 0;
-  }
-
   .site-menu--index & {
     @media (min-width: $width-pre-desktop) {
       color: $color-white;

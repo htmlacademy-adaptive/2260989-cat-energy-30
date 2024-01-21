@@ -20,7 +20,7 @@
 }
 
 // Чтобы не вставлять SVG в разметку размещаю через псевдоэлемент на поле label
-// Активные состояния реализовываю через маскирование SVG-шки
+// Активные состояния реализовываю через маскирование SVG.
 
 .field__ico {
   &::after {
@@ -46,16 +46,10 @@
     mask-position: center right;
   }
 
-  // todo Временно, для эксперимента и личной прокачки навыков,
-  // todo т.к. :has плохо подерживается браузерами. Надо переделать!
-
-  // Окрашиваем фон под маскированными иконками, если
-  // фокус на дочернем элементе input
   &:has(.field__input:focus)::after {
     background-color: $basic-green;
   }
 
-  // набор в input-е не по правилам валидации
   &:has(:not(:placeholder-shown):invalid)::after {
     background-color: $status-error;
   }
@@ -80,8 +74,6 @@
     padding: 11px 20px;
   }
 
-  // Disable arrows from .field__input[type="number"]
-
   &[type="number"]::-webkit-outer-spin-button,
   &[type="number"]::-webkit-inner-spin-button {
     appearance: none;
@@ -90,7 +82,6 @@
   &[type="number"],
   &[type="number"]:hover,
   &[type="number"]:focus {
-    // appearance: none;
     appearance: textfield;
   }
 
@@ -103,11 +94,6 @@
   .field:hover &:not(:focus) {
     outline: 1px solid $special-grey-300;
   }
-
-  // Подсмотрел! Правило на валидность срабатывает только тогда, когда начинаю
-  // вводить текст (т.е. пропадает плейсхолдер - :not(:placeholder-shown))
-  // Без этого псевдокласса красный outline рисуется вокруг
-  // всех обязательных полей ввода по умолчанию.
 
   &:not(:placeholder-shown):invalid {
     outline: 2px solid $status-error;

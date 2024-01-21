@@ -3,17 +3,12 @@
   align-items: baseline;
 
   @media (min-width: $width-tablet) and (max-width: ($width-pre-desktop - 1px)) {
-    // @media (min-width: $width-tablet) and (max-width: ($width-pre-desktop)) {
-    // flex-wrap: wrap;
-    // justify-content: space-between;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
     row-gap: 21px;
   }
 
   @media (min-width: $width-pre-desktop) {
-    // display: grid;
-    // grid-auto-flow: column;
     grid-template-columns: (245px + 80px) (245px + 80px) 245px;
   }
 }

@@ -43,7 +43,6 @@
     @media (min-width: $width-tablet) {
       width: 101px;
       height: auto;
-      // Немного выравниваем текст логотипа по базовой линии главного меню
       margin-bottom: -6px;
     }
 
@@ -53,11 +52,3 @@
     }
   }
 }
-
-// todo Тимчасово!
-
-// .page-header__logo.logo {
-//   @media (min-width: $width-tablet) {
-//     outline: 1px dotted $special-grey-250;
-//   }
-// }
