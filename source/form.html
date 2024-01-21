@@ -63,13 +63,15 @@
             </legend>
             <ul class="fieldset__list fieldset__list--about container">
               <li class="fieldset__item">
-                <label class="field"><span class="field__text">Имя:* </span><input class="field__input" name="cat-name" type="text" placeholder="Степан" required></label>
+                <label class="field"><span class="field__text">Имя:*</span><input class="field__input" name="cat-name" type="text" placeholder="Степан" required></label>
               </li>
               <li class="fieldset__item">
-                <label class="field"><span class="field__text">Вес (кг):* </span><input class="field__input" name="cat-weight" type="number" min="1" step="0.5" placeholder="7" required></label>
+                <label class="field"><span class="field__text">Вес (кг):*</span>
+                  <input class="field__input" name="cat-weight" type="number" required>
+                </label>
               </li>
               <li class="fieldset__item">
-                <label class="field"><span class="field__text">Возраст (лет): </span><input class="field__input" name="cat-age" type="number" min="1" placeholder="7"></label>
+                <label class="field"><span class="field__text">Возраст (лет):</span><input class="field__input" name="cat-age" type="number" min="1" placeholder="7"></label>
               </li>
             </ul>
           </fieldset>
@@ -81,13 +83,13 @@
             </legend>
             <ul class="fieldset__list  fieldset__list--target container">
               <li class="fieldset__item">
-                <label class="select select--radio"><input class="select__input" type="radio" name="target" value="slim" checked><span class="select__text"> Похудение</span></label>
+                <label class="select select--radio"><input class="select__input" type="radio" name="target" value="slim" checked><span class="select__text">Похудение</span></label>
               </li>
               <li class="fieldset__item">
-                <label class="select select--radio"><input class="select__input" type="radio" name="target" value="fatten"><span class="select__text"> Набор массы</span></label>
+                <label class="select select--radio"><input class="select__input" type="radio" name="target" value="fatten"><span class="select__text">Набор массы</span></label>
               </li>
               <li class="fieldset__item">
-                <label class="select select--radio"><input class="select__input" type="radio" name="target" value="offer"><span class="select__text"> Не знаю (Нужен ваш совет)</span></label>
+                <label class="select select--radio"><input class="select__input" type="radio" name="target" value="offer"><span class="select__text">Не знаю (Нужен ваш совет)</span></label>
               </li>
             </ul>
           </fieldset>
@@ -100,11 +102,11 @@
           </legend>
           <ul class="fieldset__list fieldset__list--contacts container">
             <li class="fieldset__item">
-              <label class="field field__ico field__ico--email"><span class="field__text">E-mail:* </span><input class="field__input" type="email" name="email" placeholder="catstepan@gmail.com" required>
+              <label class="field field__ico field__ico--email"><span class="field__text">E-mail:*</span><input class="field__input" type="email" name="email" placeholder="catstepan@gmail.com" required>
               </label>
             </li>
             <li class="fieldset__item">
-              <label class="field field__ico field__ico--phone"><span class="field__text">Телефон:* </span><input class="field__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" required></label>
+              <label class="field field__ico field__ico--phone"><span class="field__text">Телефон:*</span><input class="field__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" required></label>
             </li>
           </ul>
         </fieldset>
@@ -115,9 +117,8 @@
             <h2 class="page__subtitle container"><span class="page__divider-item">Комментарий</span></h2>
           </div>
           <div class="fieldset__list container">
-            <label class="field" for="comments"><span class="visually-hidden">Оставьте Ваш коментарий</span>
-              <textarea class="field__input field__input--comments" name="comments" id="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
-            </label>
+            <label class="field" for="comments"><span class="visually-hidden">Оставьте Ваш коментарий</span></label>
+            <textarea class="field__input field__input--comments" name="comments" id="comments" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </div>
 
@@ -128,16 +129,16 @@
           </legend>
           <ul class="fieldset__list fieldset__list--more container">
             <li class="fieldset__item">
-              <label class="select select--checkbox"><input class="select__input" type="checkbox" name="addition" value="sweetener" checked><span class="select__text"> Сахарозаменитель</span></label>
+              <label class="select select--checkbox"><input class="select__input" type="checkbox" name="addition" value="sweetener" checked><span class="select__text">Сахарозаменитель</span></label>
             </li>
             <li class="fieldset__item">
-              <label class="select select--checkbox"><input class="select__input" type="checkbox" name="addition" value="water"><span class="select__text"> Питьевая вода</span></label>
+              <label class="select select--checkbox"><input class="select__input" type="checkbox" name="addition" value="water"><span class="select__text">Питьевая вода</span></label>
             </li>
             <li class="fieldset__item">
-              <label class="select select--checkbox"><input class="select__input" type="checkbox" name="addition" value="milk"><span class="select__text"> Молоко</span></label>
+              <label class="select select--checkbox"><input class="select__input" type="checkbox" name="addition" value="milk"><span class="select__text">Молоко</span></label>
             </li>
             <li class="fieldset__item">
-              <label class="select select--checkbox"><input class="select__input" type="checkbox" name="addition" value="vitamin"><span class="select__text"> Витамины</span></label>
+              <label class="select select--checkbox"><input class="select__input" type="checkbox" name="addition" value="vitamin"><span class="select__text">Витамины</span></label>
             </li>
           </ul>
         </fieldset>
@@ -185,7 +186,7 @@
           <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">ВКонтакте</span>
             <svg width="23" height="13">
-              <use xlink:href="./img/icons/sprite.svg#vkontakte"></use>
+              <use href="../../images/icons/stack.svg#vkontakte"></use>
             </svg>
           </a>
         </li>
@@ -193,7 +194,7 @@
           <a class="social__link social__link--instagram" href="https://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">Инстаграм</span>
             <svg width="16" height="16">
-              <use xlink:href="./img/icons/sprite.svg#instagram"></use>
+              <use href="../../images/icons/stack.svg#youtube"></use>
             </svg>
           </a>
         </li>
@@ -201,7 +202,7 @@
           <a class="social__link social__link--facebook" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Фейсбук</span>
             <svg width="23" height="20">
-              <use xlink:href="./img/icons/sprite.svg#facebook"></use>
+              <use href="../../images/icons/stack.svg#telegram"></use>
             </svg>
           </a>
         </li>
@@ -210,7 +211,7 @@
       <a class="page-footer__academy academy" href="https://htmlacademy.org/">
         <span class="visually-hidden">Разработано в</span>&nbsp;HTML Academy
         <svg class="academy__logo" width="27" height="34" role="img" aria-hidden="true">
-          <use xlink:href="./img/icons/sprite.svg#html-academy"></use>
+          <use href="images/logo-html-academy.svg"></use>
         </svg>
       </a>
     </div>
