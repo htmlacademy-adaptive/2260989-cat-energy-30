@@ -1,12 +1,12 @@
 ///Миксины
-@import "./common/mixins.scss";
+@import "./global/mixins.scss";
 
 /// Общие
-@import "./common/global.scss";
+@import "./global/global.scss";
 
 /// Шрифты. Переменные
-@import "./common/fonts.scss";
-@import "./common/variables.scss";
+@import "./global/fonts.scss";
+@import "./global/variables.scss";
 
 /// Блоки
 @import "./blocks/visually-hidden.scss";
