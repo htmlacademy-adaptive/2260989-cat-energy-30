@@ -90,6 +90,19 @@
 
   @media (min-width: $desktop-width) {
     right: 190px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #000000;
+  mask-size: 20px 20px;
+  mask-repeat: no-repeat;
+  mask-position: right 0 top 0;
+
+  &--email {
+    mask-image: url("../../images/icons/stack.svg#icon-email");
+  }
+
+  &--phone {
+    mask-image: url("../../images/icons/stack.svg#icon-phone");
   }
 }
 
