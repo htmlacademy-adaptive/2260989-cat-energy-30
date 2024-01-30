@@ -123,28 +123,32 @@
 
   &--healthy {
     &::before {
-      background-image: url("../../images/icon-healthy.svg"),
+      background-image:
+        url("../../images/icon-healthy.svg"),
         linear-gradient($color-secondary, $color-secondary);
     }
   }
 
   &--easy {
     &::before {
-      background-image: url("../../images/icon-easy.svg"),
+      background-image:
+        url("../../images/icon-easy.svg"),
         linear-gradient($color-secondary, $color-secondary);
     }
   }
 
   &--econom {
     &::before {
-      background-image: url("../../images/icon-econom.svg"),
+      background-image:
+        url("../../images/icon-econom.svg"),
         linear-gradient($color-secondary, $color-secondary);
     }
   }
 
   &--effect {
     &::before {
-      background-image: url("../../images/icon-effect.svg"),
+      background-image:
+        url("../../images/icon-effect.svg"),
         linear-gradient($color-secondary, $color-secondary);
     }
   }
