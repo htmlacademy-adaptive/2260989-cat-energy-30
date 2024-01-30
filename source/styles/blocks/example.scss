@@ -2,11 +2,24 @@
   background-color: $background-color-secondary;
 
   @media (min-width: $tablet-width) {
-    background: linear-gradient(to top, $background-color-secondary, $background-color-secondary 464px, $background-color-primary 464px, $background-color-primary);
+    background:
+      linear-gradient(
+      to top,
+      $background-color-secondary,
+      $background-color-secondary 464px,
+      $background-color-primary 464px,
+      $background-color-primary
+    );
   }
 
   @media (min-width: $desktop-width) {
-    background: linear-gradient($background-color-primary, $background-color-primary 135px, $background-color-secondary 135px, $background-color-secondary);
+    background:
+      linear-gradient(
+      $background-color-primary,
+      $background-color-primary 135px,
+      $background-color-secondary 135px,
+      $background-color-secondary
+    );
   }
 }
 
@@ -33,7 +46,8 @@
 .example__content {
   @media (min-width: $desktop-width) {
     width: 35%;
-    min-width: 432px;
+    min-width: 436px;
+    margin-left: 60px;
   }
 }
 

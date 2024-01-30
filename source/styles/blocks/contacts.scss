@@ -24,6 +24,10 @@
     left: calc(50% - 610px);
   }
 
+  &--index {
+    background-color: $background-color-primary;
+  }
+
   &--primary {
     background-color: $background-color-secondary;
 

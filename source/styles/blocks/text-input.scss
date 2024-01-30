@@ -69,19 +69,27 @@
   width: 20px;
   height: 20px;
   right: 15px;
-  top: 50%;
+  top: 53%;
   transform: translateY(-50%);
   background-color: #000000;
-  mask-size: 20px 20px;
+  mask-size: 18px 18px;
   mask-repeat: no-repeat;
   mask-position: right 0 top 0;
+}
 
-  &--email {
-    mask-image: url("../../images/icons/stack.svg#icon-email");
+.text-input__icon--email {
+  mask-image: url("../../images/icons/stack.svg#icon-email");
+
+  @media (min-width: $desktop-width) {
+    right: 120px;
   }
+}
 
-  &--phone {
-    mask-image: url("../../images/icons/stack.svg#icon-phone");
+.text-input__icon--phone {
+  mask-image: url("../../images/icons/stack.svg#icon-phone");
+
+  @media (min-width: $desktop-width) {
+    right: 190px;
   }
 }
 

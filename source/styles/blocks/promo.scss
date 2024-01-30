@@ -1,19 +1,33 @@
 .promo {
-  background: linear-gradient($color-secondary, $color-secondary 61%, $background-color-primary 61%, $background-color-primary);
+  background:
+    linear-gradient(
+      $color-secondary,
+      $color-secondary 61%,
+      $background-color-primary 61%,
+      $background-color-primary
+    );
   background-image:
     image-set(
-    url("../../images/promo-background-mobile@1x.webp") type("image/webp") 1x,
-    url("../../images/promo-background-mobile@2x.webp") type("image/webp") 2x,
-    url("../../images/promo-background-mobile@1x.png") type("image/png") 1x,
-    url("../../images/promo-background-mobile@2x.png") type("image/png") 2x
-  ),
-    linear-gradient(#63a63b, #63a63b 302px, $background-color-primary 302px, $background-color-primary);
-  background-size: 320px 302px, auto;
+      url("../../images/promo-background-mobile@1x.webp") type("image/webp") 1x,
+      url("../../images/promo-background-mobile@2x.webp") type("image/webp") 2x,
+      url("../../images/promo-background-mobile@1x.png") type("image/png") 1x,
+      url("../../images/promo-background-mobile@2x.png") type("image/png") 2x
+    ),
+    linear-gradient(
+      #63a63b,
+      #63a63b 302px,
+      $background-color-primary 302px,
+      $background-color-primary
+    );
+  background-size:
+    320px 302px,
+    auto;
   background-position: top center;
   background-repeat: no-repeat;
   color: #ffffff;
   margin: 0 auto;
   padding: 27px 20px 0;
+  text-align: center;
 
   @media (min-width: $tablet-width) {
     background: $background-color-primary;
@@ -29,7 +43,7 @@
   }
 }
 
-.promo__wrapper {
+.promo-wrapper {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -72,7 +86,7 @@
   }
 }
 
-.promo__title {
+.promo-title {
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -95,7 +109,7 @@
   }
 }
 
-.promo__slogan {
+.promo-slogan {
   font-size: 14px;
   line-height: 14px;
   text-transform: uppercase;
@@ -117,7 +131,7 @@
   }
 }
 
-.promo__button {
+.promo-button {
   width: 280px;
 
   @media (min-width: $tablet-width) {
