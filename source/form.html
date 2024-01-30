@@ -90,11 +90,13 @@
             <ul class="form__list">
               <li class="form__item text-input">
                 <label class="form__label" for="owner-email">E-mail<sup>*</sup>:</label>
-                <input class="form__input" type="email" name="owner-email" placeholder="kuklachev@gmail.com" id="owner-email" required>
+                <input class="form__input form__input--email" type="email" name="owner-email" placeholder="kuklachev@gmail.com" id="owner-email" required>
+                <div class="text-input__icon text-input__icon--email" ></div>
               </li>
               <li class="form__item text-input">
                 <label class="form__label" for="owner-phone">Телефон<sup>*</sup>:</label>
-                <input class="form__input" type="tel" name="owner-phone" placeholder="8 (960) 900-60-90" id="owner-phone" required>
+                <input class="form__input form__input--phone" type="tel" name="owner-phone" placeholder="8 (960) 900-60-90" id="owner-phone" required>
+                <div class="text-input__icon text-input__icon--phone" ></div>
               </li>
             </ul>
           </fieldset>
@@ -147,6 +149,12 @@
             </div>
           </div>
           <picture class="contacts__location">
+            <source type="image/webp" media="(min-width: 1440px)"
+              srcset="images/map-desktop@x1.webp 1x, images/map-desktop@2x.webp 2x" width="1440" height="400">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="images/map-tablet@1x.webp 1x, images/map-tablet@2x.webp 2x" width="768" height="400">
+            <source type="image/webp" srcset="images/map-mobile@1x.webp 1x, images/map-mobile@2x.webp 2x" width="320"
+              height="362">
             <source width="1440" height="400" type="image/jpeg" media="(min-width: 1440px)" srcset="images/map-desktop@1x.jpg 1x, images/map-desktop@2x.jpg 2x">
             <source width="768" height="400" type="image/jpeg" media="(min-width: 768px)" srcset="images/map-tablet@1x.jpg 1x, images/map-tablet@2x.jpg 2x">
             <img class="contacts-maps" src="images/map-mobile@1x.jpg" srcset="images/map-mobile@2x.jpg 2x" width="320" height="362" alt="Наше местоположение на карте.">
