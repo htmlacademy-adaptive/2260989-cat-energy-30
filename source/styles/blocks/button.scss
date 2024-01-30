@@ -1,14 +1,28 @@
 .button {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: #ffffff;
   background-color: $color-secondary;
   text-decoration: none;
+  border: none;
+  min-height: 40px;
+  box-sizing: border-box;
+  padding: 5px;
 
-  &--all {
-    color: $text-color-secondary;
-    background-color: $background-color-secondary;
+  &:hover,
+  &:focus {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &:disabled {
+    opacity: 0.5;
   }
 }
