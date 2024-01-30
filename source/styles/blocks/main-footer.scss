@@ -2,7 +2,7 @@
   background-color: $background-color-secondary;
 }
 
-.main-footer__content {
+.main-footer-content {
   text-align: center;
   padding: 40px 20px;
   display: flex;
@@ -27,13 +27,13 @@
   }
 }
 
-.main-footer__logo {
+.main-footer-logo {
   @media (min-width: $tablet-width) {
     margin-right: 160px;
   }
 }
 
-.main-footer__logo-text {
+.main-footer-logo__text {
   &:hover {
     opacity: 0.8;
   }
