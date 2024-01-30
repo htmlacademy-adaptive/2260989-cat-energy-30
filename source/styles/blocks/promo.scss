@@ -1,11 +1,13 @@
 .promo {
-  background: linear-gradient(
-    $color-secondary,
-    $color-secondary 61%,
-    $background-color-primary 61%,
-    $background-color-primary
-  );
-  background-image: image-set(
+  background: 
+    linear-gradient(
+      $color-secondary,
+      $color-secondary 61%,
+      $background-color-primary 61%,
+      $background-color-primary
+    );
+  background-image: 
+    image-set(
       url("../../images/promo-background-mobile@1x.webp") type("image/webp") 1x,
       url("../../images/promo-background-mobile@2x.webp") type("image/webp") 2x,
       url("../../images/promo-background-mobile@1x.png") type("image/png") 1x,
